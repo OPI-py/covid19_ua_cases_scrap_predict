@@ -1,3 +1,5 @@
+#! python3
+
 import wiki_scrap
 from bs4 import BeautifulSoup
 import requests
