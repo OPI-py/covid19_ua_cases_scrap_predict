@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-=======
-#! python3
-
-# from bs4 import BeautifulSoup
-# import requests
-import pandas as pd
->>>>>>> 776ad4f6db7b814cf4b1807c39644160086e62dd
 
 
 import pandas as pd
@@ -39,7 +31,6 @@ def make_df(table):
 
 
 def make_july_df(table_july):
-<<<<<<< HEAD
     """
     Scraping necessary data from 'wikitable mw-datatable collapsible'.
     Making datafram with it.
@@ -63,23 +54,3 @@ def make_july_df(table_july):
             values = [td.text for td in tds]
         df = df.append(pd.Series(values, index=columns), ignore_index=True)
     return df
-=======
-	rows = table_july.find_all('tr')
-	columns = [v.text.replace('\n', '') for v in rows[2].find_all('th')]
-	columns = columns[0:1] + columns[2:6]
-	df = pd.DataFrame(columns = columns)
-
-	for i in range(3, 25):
-		tds = rows[i].find_all('td')
-		
-		if len(tds) > 0:
-			values = [tds[0].text.replace('\n', ''),
-				tds[2].text.replace('\n', '').replace(',', ''),
-				tds[3].text.replace('\n', '').replace(',', ''),
-				tds[4].text.replace('\n', '').replace(',', ''),
-				tds[5].text.replace('\n', '').replace(',', '')]
-		else:
-			values = [td.text for td in tds]
-		df = df.append(pd.Series(values, index=columns), ignore_index=True)
-	return df
->>>>>>> 776ad4f6db7b814cf4b1807c39644160086e62dd
