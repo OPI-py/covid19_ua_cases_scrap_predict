@@ -47,6 +47,7 @@ X_train, X_test, Y_train, Y_test = train_test_split(X, Y,
 
 model.fit(X_train, Y_train)
 y_test_pred = model.predict(X_test)
+<<<<<<< HEAD
 
 def show_result():
     print(y_test_pred)
@@ -72,3 +73,32 @@ def plot_result():
     plt.show()
     
 # plot_result()
+=======
+# print(y_test_pred)
+# print(Y_test)
+
+# Outputs: [24.42606323]
+# print(model.score(X_test, Y_test).round(2))
+# from sklearn.metrics import mean_squared_error
+# print(mean_squared_error(Y_test, y_test_pred).round(2))
+
+# plt.scatter(X_test, Y_test, 
+#   label='testing data');
+# plt.plot(X_test, y_test_pred,
+#   label='prediction', linewidth=3)
+# plt.xlabel('Total Cases'); plt.ylabel('New Cases')
+# plt.legend(loc='upper left')
+# plt.show()
+# X2 = df1[['Total Deaths', 'Total Cases']]
+# X2_train, X2_test, Y_train, Y_test = train_test_split(X2, Y,
+# 	test_size = 0.3, random_state=1)
+# model2 = LinearRegression()
+# model2.fit(X2_train, Y_train)
+
+# print(model2.intercept_.round(2))
+# print(model2.coef_.round(2))
+
+# y_test_pred2 = model2.predict(X2_test)
+# print(mean_squared_error(Y_test, y_test_pred2).round(2))
+# print(model2.score(X2_test, Y_test).round(2))
+>>>>>>> 776ad4f6db7b814cf4b1807c39644160086e62dd
