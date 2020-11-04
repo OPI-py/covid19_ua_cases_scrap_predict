@@ -33,7 +33,7 @@ df1 = df.drop(['Date'], axis=1)
 df1 = df1.astype(float)
 
 def check_wd():
-    """Plot New Cases graph data"""    
+    """Plot New Cases data"""    
     plt.style.use('ggplot')
     plt.plot(df1['New Cases'])
     plt.show()
