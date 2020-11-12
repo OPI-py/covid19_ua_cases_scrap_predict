@@ -32,7 +32,7 @@ def make_df(table):
 def make_july_df(table_july):
     """
     Scraping necessary data from 'wikitable mw-datatable collapsible'.
-    Making datafram with it.
+    Making dataframe with it.
     Required fields (Date, New cases, Total cases, New deaths, Total deaths)
     """
     rows = table_july.find_all('tr')
